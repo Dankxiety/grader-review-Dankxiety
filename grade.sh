@@ -6,7 +6,14 @@ rm -rf grading-area
 mkdir grading-area
 
 git clone $1 student-submission
-echo 'Finished cloning'
+
+if [[ $? -ne 0 ]]
+then
+  echo "Failed Cloneing the Repository. Check the url and try again."
+  exit 1
+else
+  echo 'Finished cloning'
+fi
 
 if [ -f "student-submission/ListExamples.java" ]
 then
