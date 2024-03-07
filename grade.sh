@@ -37,7 +37,7 @@ fi
 
 echo "Program compiled successfully!"
 
-# echo $(java -cp $CPATH org.junit.runner.JUnitCore TestListExamples)
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples
 OUTPUT=$(java -cp $CPATH org.junit.runner.JUnitCore TestListExamples | tail -2 | head -1)
 OK=$(echo "$OUTPUT" | awk '{print $1}')
 if [ "$OK" == "OK" ]

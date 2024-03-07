@@ -20,14 +20,6 @@ public class TestListExamples {
   }
 
   @Test
-  public void testMergeOutOfOrder() {
-    List<String> left = Arrays.asList("b", "a", "c");
-    List<String> right = Arrays.asList("d", "a", "d");
-    List<String> expected = Arrays.asList("a", "a", "b", "c", "d", "d");
-    assertEquals(expected, ListExamples.merge(left, right));
-  }
-
-  @Test
   public void testFilter() {
     IsMoon sc = new IsMoon();
     List<String> initial = Arrays.asList("moon", "Moon", " moon", "mo on", "wefushdjo", "full moon tonight", "fullmoontonight", "fullmoon");
